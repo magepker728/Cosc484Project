@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Restaurent.master.cs" Inherits="Restaurent_Project484.Restaurent" %>
+<%@ Register Src="~/Controls/Banner.ascx" TagName="Banner" TagPrefix="ucBan" %>
+
+<%@ Register Src="~/Controls/ContentSection.ascx" TagName="Content" TagPrefix="ContentSec" %>
+<%@ Register Src="~/Controls/FooterSection.ascx" TagName="Footer" TagPrefix="FooterSec" %>
+<%@ Register Src="~/Controls/LinkSection.ascx" TagName="Link" TagPrefix="LinkSec" %>
+<%@ Register Src="~/Controls/VideoSection.ascx" TagName="Video" TagPrefix="VideoSec" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <ucBan:Banner id="Banner" runat="server" />
+         <ContentSec:Content id="ContentSection" runat="server" />
+         <LinkSec:Link id="LinkSection" runat="server" />
+         <VideoSec:Video id="VideoSec" runat="server" />
+
+        
+    </header>
+
+    <form id="form1" runat="server">
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
